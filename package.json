@@ -1,0 +1,31 @@
+{
+  "name": "pokedex-app",
+  "version": "1.0.0",
+  "description": "An application that utilizes React Hooks and a Pokemon API. ",
+  "main": "server.js",
+  "scripts": {
+    "test": "npm start",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dscherer21/pokedex-app.git"
+  },
+  "keywords": [
+    "React",
+    "Hooks",
+    "Pokemon",
+    "API"
+  ],
+  "author": "dscherer21",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dscherer21/pokedex-app/issues"
+  },
+  "homepage": "https://github.com/dscherer21/pokedex-app#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
+  }
+}
