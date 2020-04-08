@@ -1,10 +1,10 @@
 # pokedex-app
-A Pokedex Application.
+A Pokedex application where you can search for Pokemon using different parameters. My first app that utilizes Jest and Test Driven Development.
 
-Deployed at:
+Deployed at: https://davids-pokedex.herokuapp.com/
 
-Technologies used:
+Technologies used: HTML5, CSS3, ES6, NodeJs, ExpressJS, ReactJS, React Hooks, JSX, DOTENV, Body-Parser, Bootstrap 4, Reactstrap, Axios, Jest, Test Driven Development(TDD), VSCode, Git and Github, and Heroku.
 
-To start server:
+To start server: In command line, type: npm start
 
-To start client:
+To start client: In the command line, cd into the client folder from the root folder and type: yarn start
