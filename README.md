@@ -1,4 +1,5 @@
 # pokedex-app
+
 A Pokedex application where you can search for Pokemon using different parameters. My first app that utilizes Jest and Test Driven Development.
 
 Deployed at: https://davids-pokedex.herokuapp.com/

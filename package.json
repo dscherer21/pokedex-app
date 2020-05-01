@@ -1,10 +1,7 @@
 {
   "name": "pokedex-app",
-  "jest": {
-    "verbose": true
-  },
   "version": "1.0.0",
-  "description": "An application that utilizes React Hooks and a Pokemon API. ",
+  "description": "A Pokedex search application the utlizes React Hooks and Jest Unit testing.",
   "main": "server.js",
   "scripts": {
     "test": "jest",
@@ -17,8 +14,10 @@
   "keywords": [
     "React",
     "Hooks",
-    "Pokemon",
-    "API"
+    "Jest",
+    "Unit",
+    "Testing",
+    "NodeJS"
   ],
   "author": "dscherer21",
   "license": "ISC",
@@ -27,12 +26,9 @@
   },
   "homepage": "https://github.com/dscherer21/pokedex-app#readme",
   "dependencies": {
-    "axios": "^0.19.2",
     "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "jest": "^25.2.7"
+    "express": "^4.17.1",
+    "jest": "^25.5.3"
   }
 }
