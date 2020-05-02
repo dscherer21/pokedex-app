@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+
 }
 
 body {
@@ -7,6 +8,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background: linear-gradient(red 50%, white 50%) fixed;
+  font-size: 22px;
 }
 
 .App {
@@ -16,4 +18,38 @@ body {
 
 .pokemonFont {
   font-family: 'Signika', sans-serif;
+  text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
+  color: yellow;
 }
+
+.pokeball {
+  border: 3px solid black;
+  width: 30%;
+  margin: auto;
+  margin-top: 3%;
+  background: linear-gradient(red 50%, white 50%);
+  padding: 4%;
+  border-radius: 50%;
+}
+
+#octagon {
+  margin: auto;
+  width: 65%;
+  height: auto;
+  border: 2px solid black;
+  transform: translateY(10%);
+  background: White;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  padding: 3%;
+}
+
+input {
+  width: 51%;
+  padding: 3px;
+}
+
+label {
+  padding: 3px;
+}
+
+
