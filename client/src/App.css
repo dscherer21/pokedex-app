@@ -7,8 +7,16 @@ body {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background: linear-gradient(red 50%, white 50%) fixed;
+  background: linear-gradient(red 49%, black 2%, whitesmoke 49%)fixed;
   font-size: 22px;
+}
+
+select {
+  width: 25%;
+}
+
+input {
+  width: 51%;
 }
 
 .App {
@@ -16,20 +24,26 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+.row {
+  padding: 12px;
+}
+
 .pokemonFont {
   font-family: 'Signika', sans-serif;
-  text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
+  text-shadow: -5px 0 blue, 0 5px blue, 5px 0 blue, 0 -5px blue;
   color: yellow;
+  line-height: 140%;
 }
 
 .pokeball {
   border: 3px solid black;
   width: 30%;
-  margin: auto;
+  margin: 10px auto;
   margin-top: 3%;
   background: linear-gradient(red 50%, white 50%);
   padding: 4%;
   border-radius: 50%;
+  box-shadow: 3px 4px rgba(0, 0, 0, .2);
 }
 
 #octagon {
@@ -37,19 +51,14 @@ body {
   width: 65%;
   height: auto;
   border: 2px solid black;
-  transform: translateY(10%);
+  /*transform: translateY(10%);*/
   background: White;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  /*border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;*/
+  border-radius: 10%;
   padding: 3%;
+  box-shadow: 3px 4px rgba(0, 0, 0, .2);
 }
 
-input {
-  width: 51%;
-  padding: 3px;
-}
 
-label {
-  padding: 3px;
-}
 
 
