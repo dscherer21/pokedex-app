@@ -7,7 +7,7 @@ body {
   height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
-  background: linear-gradient(red 49%, black 2%, whitesmoke 49%)fixed;
+  background: linear-gradient(red 0, red 49%, black 0, black 51%, whitesmoke 0) fixed;
   font-size: 22px;
 }
 
@@ -40,7 +40,7 @@ input {
   width: 30%;
   margin: 10px auto;
   margin-top: 3%;
-  background: linear-gradient(red 50%, white 50%);
+  background: linear-gradient(red 0, red 49%, black 0, black 51%, whitesmoke 0);
   padding: 4%;
   border-radius: 50%;
   box-shadow: 3px 4px rgba(0, 0, 0, .2);
