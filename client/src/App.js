@@ -3,16 +3,28 @@ import './App.css';
 import axios from 'axios';
 
 function App() {
-  const [displayResults, setDisplayResults] = useState();
+  const[pokemonType1, setPokemonType1] = useState();
+  const[pokemonType2, setPokemonType2] = useState();
+  const[pokemonName, setPokemonName] = useState();
+  const [displayResults, setDisplayResults] = useState(
+    <h5>
+        <p>If you know the name of the Pokemon you are trying to find, type it's name into the 'Pokémon Name' field. You can also search by Pokemon type by using the dropdown menus. Click the 'Search' button once you are ready to search.</p> 
+        <p style={{color: 'red'}}>Note: If you are searching by name, please leave the 'Type' fields set to 'None.'</p>
+      </h5>
+  );
+  const apiCall = (e) => {
+    console.log('Search Button clicked!');
+    console.log('Pokemon Type 1: ' + pokemonType1);
+    e.preventDefault();
+    setDisplayResults(
+      <h5>Searching...</h5>
+    );
+  };
 
   useEffect(() => {
-    setDisplayResults(
-      <h5>
-        <p>If you know the name of the Pokemon you are trying to find, type it's name into the 'Pokémon Name' field. You can also search by Pokemon type by using the dropdown menus. Click the 'Search' button once you are ready to search.</p> 
-        <p style={{color: 'red'}}>Note: If you are searching by name, please leave the type fields set to 'None.'</p>
-      </h5>
-    );
+    
   }, []);
+
 
   return (
     <div className="App" path='/'>
@@ -35,7 +47,7 @@ function App() {
               <label htmlFor='type1'>Pokémon Type 1:</label>
             </div>
             <div className='col-xl-12'>
-              <select name='type1'>
+              <select name='type1' id='type1'>
                 <option value='none'>None</option>
                 <option value='bug'>Bug</option>
                 <option value='dark'>Dark</option>
@@ -90,7 +102,7 @@ function App() {
 
           <div className='row'>
             <div className='col-xl-12'>
-              <button className='btn btn-primary'>Search</button>
+              <button className='btn btn-primary' onClick={apiCall}>Search</button>
             </div>
           </div>
         </form>
