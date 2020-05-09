@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
-//import apiCall from './components/apiCall';
 import pokemonTypes from './components/pokemonTypes';
 
 function App() {
