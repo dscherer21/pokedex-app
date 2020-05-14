@@ -7,7 +7,7 @@ import pokemonForm from './components/pokemonForm';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
+  const linkElement = getByText(/David/i);
   expect(linkElement).toBeInTheDocument();
 });
 

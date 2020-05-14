@@ -33,6 +33,36 @@ function App() {
       // handle success
       console.log(response.data.pokemon);
       console.log(response);
+      if(response.data.pokemon === undefined) {
+        let type2;
+        if(response.data.types[1]) {
+          //if the pokemon has a 2nd type display that type or display nothing if not
+          type2 = '/' + response.data.types[1].type.name.charAt(0).toUpperCase() + response.data.types[1].type.name.slice(1);
+        } 
+        //Display Pokemon Name Search Results
+        setDisplayResults(
+          <div className='row'>
+            <div className='col-xl-12'>
+              <h1>{response.data.name.charAt(0).toUpperCase() + response.data.name.slice(1)}</h1>
+            </div>
+            <div className='col-xl-12'>
+              <img className='spriteImage' src={response.data.sprites.front_default} alt={'Image of a ' + response.data.name + '.'}/>
+            </div>
+            <div className='col-xl-12'>
+              <h2>Type: {response.data.types[0].type.name.charAt(0).toUpperCase() + response.data.types[0].type.name.slice(1)}{type2}</h2>
+            </div>
+            <div className='col-xl-12'>
+              <h2>Average Height: {(response.data.height*0.3280839895).toFixed(2)} ft</h2>
+            </div>
+            <div className='col-xl-12'>
+              <h2>Average Weight: {(response.data.weight/4.5359237).toFixed(2)} lbs</h2>
+            </div>
+          </div>
+        );
+      } else {
+        //Display Pokemon Type Search Results
+        setDisplayResults();
+      }
     })
     .catch(function (error) {
       // handle error
