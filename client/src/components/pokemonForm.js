@@ -8,10 +8,10 @@ function PokemonForm(props) {
 
           <div className='row'>
             <div className='col-xl-12'>
-              <label htmlFor='pokemonName' placeholder='Type Pokemon Name Here'>Pokémon Name:</label>
+              <label htmlFor='pokemonName'>Pokémon Name:</label>
             </div>
             <div className='col-xl-12'>
-              <input name='pokemonName' onChange={(e) => props.setPokemonName(e.target.value)}/>
+              <input name='pokemonName' placeholder='Type Pokémon Name Here' onChange={(e) => props.setPokemonName(e.target.value)}/>
             </div>
           </div>
 
@@ -30,23 +30,10 @@ function PokemonForm(props) {
 
           <div className='row'>
             <div className='col-xl-12'>
-              <label htmlFor='type2'>Pokémon Type 2:</label>
-            </div>
-            <div className='col-xl-12'>
-              <select name='type2' onChange={(e) => props.setPokemonType2(e.target.value)}>
-                {pokemonTypes.map((types, index) => (
-                  <option value={types} key={index}>{types}</option>
-                ))}
-              </select>
-            </div>
-          </div>
-
-          <div className='row'>
-            <div className='col-xl-12'>
               <button className='btn btn-primary' onClick={props.apiCall}>Search</button>
             </div>
           </div>
-          
+
         </form>
     );
 };

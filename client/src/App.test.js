@@ -3,6 +3,7 @@ import { render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import App from './App';
 import pokemonTypes from './components/pokemonTypes';
+import pokemonForm from './components/pokemonForm';
 
 test('renders learn react link', () => {
   const { getByText } = render(<App />);
