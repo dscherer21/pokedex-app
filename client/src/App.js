@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 import PokemonForm from './components/pokemonForm';
+import NameSearchResults from './components/nameSearchResults';
 
 function App() {
   const[pokemonType1, setPokemonType1] = useState('none');
@@ -21,18 +22,19 @@ function App() {
     console.log('Search Button clicked!');
     console.log('Pokemon Type 1: ' + pokemonType1);
     console.log('Pokemon Name: ' + pokemonName);
-    e.preventDefault();
+    //e.preventDefault();
 
     //setting a 'Searching' message until the api call returns data
     setDisplayResults(
       <h5>Searching...</h5>
     );
 
-    axios.get('https://pokeapi.co/api/v2/' + apiModifier + '')
+    axios.get('https://pokeapi.co/api/v2/' + apiModifier)
     .then(function (response) {
       // handle success
       console.log(response.data.pokemon);
       console.log(response);
+      
       if(response.data.pokemon === undefined) {
         let type2;
         if(response.data.types[1]) {
@@ -41,27 +43,32 @@ function App() {
         } 
         //Display Pokemon Name Search Results
         setDisplayResults(
-          <div className='row'>
-            <div className='col-xl-12'>
-              <h1>{response.data.name.charAt(0).toUpperCase() + response.data.name.slice(1)}</h1>
+          <NameSearchResults
+            response={response}
+            type2={type2}
+          />
+        );
+      } else {
+      
+        //Display Pokemon Type Search Results
+        setDisplayResults(
+          <div className='container'>
+            <div className='row'>
+              <div className='col-xl-12'>
+                <h3>{pokemonType1.charAt(0).toUpperCase() + pokemonType1.slice(1)} Type Pokémon</h3>
+              </div>
             </div>
-            <div className='col-xl-12'>
-              <img className='spriteImage' src={response.data.sprites.front_default} alt={'Image of a ' + response.data.name + '.'}/>
-            </div>
-            <div className='col-xl-12'>
-              <h2>Type: {response.data.types[0].type.name.charAt(0).toUpperCase() + response.data.types[0].type.name.slice(1)}{type2}</h2>
-            </div>
-            <div className='col-xl-12'>
-              <h2>Average Height: {(response.data.height*0.3280839895).toFixed(2)} ft</h2>
-            </div>
-            <div className='col-xl-12'>
-              <h2>Average Weight: {(response.data.weight/4.5359237).toFixed(2)} lbs</h2>
+            <div className='row'>
+              {response.data.pokemon.map((pokemon, index) => (
+                <div className='col-xl-3 typeSearch' key={index}>
+                  <button className='btn btn-info' onClick={() => typeSearch(pokemon.pokemon.name)}>
+                    <h5>{pokemon.pokemon.name.charAt(0).toUpperCase() + pokemon.pokemon.name.slice(1)}</h5>
+                  </button>
+                </div>
+              ))}
             </div>
           </div>
         );
-      } else {
-        //Display Pokemon Type Search Results
-        setDisplayResults();
       }
     })
     .catch(function (error) {
@@ -73,14 +80,19 @@ function App() {
     });
   };
 
+  function typeSearch(name) {
+    console.log(name);
+    setPokemonName(name);
+    setPokemonType1('none');
+    apiCall();
+  }
+
   useEffect(() => {
     if(pokemonType1 !== 'none' && !pokemonName) {
       setApiModifier('type/' + pokemonType1 + '');
     } else if(pokemonType1 === 'none' && pokemonName) {
       setApiModifier('pokemon/' + pokemonName + '');
     }
-
-    
   }, [pokemonName, pokemonType1]);
 
   return (

@@ -2,16 +2,22 @@ import React from 'react';
 import pokemonTypes from './pokemonTypes';
 
 function PokemonForm(props) {
+
+    function onFormSubmit(e) {
+        e.preventDefault();
+        //document.getElementById('pokemonName').reset();
+        //document.getElementById('type1').reset();
+    }
     
     return(
-        <form className='container'>
+        <form className='container' onSubmit={onFormSubmit}>
 
           <div className='row'>
             <div className='col-xl-12'>
               <label htmlFor='pokemonName'>Pokémon Name:</label>
             </div>
             <div className='col-xl-12'>
-              <input name='pokemonName' placeholder='Type Pokémon Name Here' onChange={(e) => props.setPokemonName(e.target.value.toLowerCase())}/>
+              <input id='pokemonName' name='pokemonName' placeholder='Type Pokémon Name Here' onChange={(e) => props.setPokemonName(e.target.value.toLowerCase())}/>
             </div>
           </div>
 
