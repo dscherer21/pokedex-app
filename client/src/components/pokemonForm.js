@@ -23,7 +23,7 @@ function PokemonForm(props) {
 
       <div className='row'>
         <div className='col-xl-12'>
-          <label htmlFor='type1'>Pokémon Type 1:</label>
+          <label htmlFor='type1'>Pokémon Type:</label>
         </div>
         <div className='col-xl-12'>
           <select name='type1' id='type1' onChange={(e) => props.setPokemonType1(e.target.value)}>

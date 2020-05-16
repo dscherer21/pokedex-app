@@ -32,6 +32,7 @@ function App() {
         let type2;
         if(response.data.types[1]) {
           //if the pokemon has a 2nd type display that type or display nothing if not
+          //most of the strings are recieved in lowercase, so this capitalizes the first letter of each name
           type2 = '/' + response.data.types[1].type.name.charAt(0).toUpperCase() + response.data.types[1].type.name.slice(1);
         } 
         //Display Pokemon Name Search Results
