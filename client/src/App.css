@@ -19,8 +19,8 @@ input {
   width: 51%;
 }
 
-a {
-  color: black !important;
+a:hover {
+  text-decoration: none !important;
 }
 
 .App {
@@ -37,6 +37,7 @@ a {
   text-shadow: -5px 0 blue, 0 5px blue, 5px 0 blue, 0 -5px blue;
   color: yellow;
   line-height: 140%;
+  font-size: 400%;
 }
 
 .pokeball {
@@ -74,6 +75,61 @@ a {
   margin-bottom: 2%;
 }
 
+@media screen and (max-width: 954px) {
 
+  .pokemonFont {
+    font-size: 350%;
+  }
 
+}
 
+@media screen and (max-width: 832px) {
+
+  .pokemonFont {
+    font-size: 300%;
+  }
+
+}
+
+@media screen and (max-width: 708px) {
+
+  .pokemonFont {
+    font-size: 250%;
+    text-shadow: -4px 0 blue, 0 4px blue, 4px 0 blue, 0 -4px blue;
+  }
+
+}
+
+@media screen and (max-width: 582px) {
+
+  .pokemonFont {
+    font-size: 200%;
+    text-shadow: -3px 0 blue, 0 3px blue, 3px 0 blue, 0 -3px blue;
+  }
+
+}
+
+@media screen and (max-width: 454px) {
+
+  .pokemonFont {
+    font-size: 150%;
+    text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
+  }
+
+}
+
+@media screen and (max-width: 320px) {
+
+  .pokemonFont {
+    font-size: 120%;
+  }
+
+  #pokemonName {
+    width: 100%;
+  }
+
+  #type1 {
+    width: 70%;
+  }
+
+}
