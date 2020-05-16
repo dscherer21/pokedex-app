@@ -90,16 +90,18 @@ function App() {
 
   useEffect(() => {
     if(pokemonType1 !== 'none' && !pokemonName) {
-      setApiModifier('type/' + pokemonType1 + '');
+      //if pokemonType is not none and pokemonName has no value, modify apicall to search for pokemonTYpe 
+      setApiModifier('type/' + pokemonType1);
     } else if(pokemonType1 === 'none' && pokemonName) {
-      setApiModifier('pokemon/' + pokemonName + '');
+      //if pokemonType is none and pokemonName is not undefined, modify apicall to search for pokemonName
+      setApiModifier('pokemon/' + pokemonName);
     }
   }, [pokemonName, pokemonType1]);
 
   return (
     <div className="App" path='/'>
       <div className='pokeball'>
-        <a href='x'>
+        <a href='/'>
           <h1 className='pokemonFont'>David's PokéDex</h1>
         </a>
       </div>
