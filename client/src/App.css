@@ -78,7 +78,7 @@ a:hover {
 @media screen and (max-width: 954px) {
 
   .pokemonFont {
-    font-size: 345%;
+    font-size: 340%;
   }
 
 }
@@ -86,7 +86,7 @@ a:hover {
 @media screen and (max-width: 832px) {
 
   .pokemonFont {
-    font-size: 295%;
+    font-size: 290%;
   }
 
 }
@@ -94,7 +94,7 @@ a:hover {
 @media screen and (max-width: 708px) {
 
   .pokemonFont {
-    font-size: 245%;
+    font-size: 240%;
     text-shadow: -4px 0 blue, 0 4px blue, 4px 0 blue, 0 -4px blue;
   }
 
@@ -103,7 +103,7 @@ a:hover {
 @media screen and (max-width: 602px) {
 
   .pokemonFont {
-    font-size: 195%;
+    font-size: 190%;
     text-shadow: -3px 0 blue, 0 3px blue, 3px 0 blue, 0 -3px blue;
   }
 
@@ -112,7 +112,7 @@ a:hover {
 @media screen and (max-width: 454px) {
 
   .pokemonFont {
-    font-size: 145%;
+    font-size: 140%;
     text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
   }
 
@@ -121,7 +121,7 @@ a:hover {
 @media screen and (max-width: 360px) {
 
   .pokemonFont {
-    font-size: 115%;
+    font-size: 110%;
   }
 
   #pokemonName {
