@@ -27,6 +27,7 @@ function App() {
 
     axios.get('https://pokeapi.co/api/v2/' + apiModifier)
     .then(function (response) {
+      console.log(response);
       // handle success
       if(response.data.pokemon === undefined) {
         let type2;
