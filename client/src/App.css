@@ -69,7 +69,7 @@ a:hover {
   /*transform: translateY(10%);*/
   background: White;
   /*border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;*/
-  border-radius: 10%;
+  border-radius: 50px;
   padding: 3%;
   box-shadow: 3px 4px rgba(0, 0, 0, .2);
   margin-bottom: 2%;

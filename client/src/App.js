@@ -19,7 +19,7 @@ function App() {
 
   
 
-  function apiCall(e) {
+  function apiCall() {
     //setting a 'Searching' message until the api call returns data
     setDisplayResults(
       <h5>Searching...</h5>
@@ -71,6 +71,7 @@ function App() {
     );
     axios.get('https://pokeapi.co/api/v2/pokemon/' + name)
     .then(function (response) {
+      console.log(response);
       let type2;
       if(response.data.types[1]) {
         //if the pokemon has a 2nd type display that type or display nothing if not

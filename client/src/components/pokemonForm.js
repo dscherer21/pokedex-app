@@ -36,7 +36,7 @@ function PokemonForm(props) {
 
       <div className='row'>
         <div className='col-xl-12'>
-          <button className='btn btn-primary' onClick={props.apiCall}>Search</button>
+          <button id='searchButton' className='btn btn-primary' onClick={props.apiCall}>Search</button>
         </div>
       </div>
 
