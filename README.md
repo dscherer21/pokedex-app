@@ -4,7 +4,7 @@ A Pokedex application where you can search for Pokemon using different parameter
 
 Deployed at: https://davids-pokedex.herokuapp.com/
 
-Technologies used: HTML5, CSS3, ES6, NodeJs, ExpressJS, ReactJS, React Hooks, JSX, DOTENV, Body-Parser, Bootstrap 4, Reactstrap, Axios, Jest, Unit Testing, VSCode, Git and Github, and Heroku.
+Technologies used: HTML5, CSS3, ES6, NodeJs, ExpressJS, ReactJS, React Hooks, JSX, DOTENV, Body-Parser, Bootstrap 4, Reactstrap, Axios, Jest, Enzyme, Unit Testing, VSCode, Git and Github, and Heroku.
 
 To start server: In command line, type: npm start
 
