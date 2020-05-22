@@ -18,7 +18,7 @@ function PokemonForm(props) {
             <h4>Pokémon Name:</h4>
           </label>
         </div>
-        <div className='col-xl-12'>
+        <div className='col-xl-12' id='removePadding'>
           <input id='pokemonName' name='pokemonName' placeholder='Type Name Here' onChange={(e) => props.setPokemonName(e.target.value.toLowerCase())}/>
         </div>
       </div>
