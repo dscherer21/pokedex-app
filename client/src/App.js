@@ -17,8 +17,6 @@ function App() {
     </h5>
   );
 
-  
-
   function apiCall() {
     //setting a 'Searching' message until the api call returns data
     setDisplayResults(
@@ -75,7 +73,7 @@ function App() {
       let type2;
       if(response.data.types[1]) {
         //if the pokemon has a 2nd type display that type or display nothing if not
-        type2 = '/' + response.data.types[1].type.name.charAt(0).toUpperCase() + response.data.types[1].type.name.slice(1);
+        type2 = ' & ' + response.data.types[1].type.name.charAt(0).toUpperCase() + response.data.types[1].type.name.slice(1);
       } 
       //Display Pokemon Name Search Results
       setDisplayResults(
@@ -105,7 +103,7 @@ function App() {
     <div className="App" path='/'>
       <div className='pokeball'>
         <a href='/'>
-          <h1 className='pokemonFont'>David's PokéDex</h1>
+          <p className='pokemonFont'>David's PokéDex</p>
         </a>
       </div>
       <div id='octagon'>

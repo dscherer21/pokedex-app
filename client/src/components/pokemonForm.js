@@ -14,16 +14,20 @@ function PokemonForm(props) {
 
       <div className='row'>
         <div className='col-xl-12'>
-          <label htmlFor='pokemonName'>Pokémon Name:</label>
+          <label htmlFor='pokemonName'>
+            <h4>Pokémon Name:</h4>
+          </label>
         </div>
         <div className='col-xl-12'>
-          <input id='pokemonName' name='pokemonName' placeholder='Type Pokémon Name Here' onChange={(e) => props.setPokemonName(e.target.value.toLowerCase())}/>
+          <input id='pokemonName' name='pokemonName' placeholder='Type Name Here' onChange={(e) => props.setPokemonName(e.target.value.toLowerCase())}/>
         </div>
       </div>
 
       <div className='row'>
         <div className='col-xl-12'>
-          <label htmlFor='type1'>Pokémon Type:</label>
+          <label htmlFor='type1'>
+            <h4>Pokémon Type:</h4>
+          </label>
         </div>
         <div className='col-xl-12'>
           <select name='type1' id='type1' onChange={(e) => props.setPokemonType1(e.target.value)}>

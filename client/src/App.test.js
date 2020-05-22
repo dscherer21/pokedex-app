@@ -2,9 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { render } from '@testing-library/react';
 import { unmountComponentAtNode } from "react-dom";
-import { shallow,configure } from 'enzyme';
+import { shallow, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-//import renderer from 'react-test-renderer';
 import App from './App';
 import pokemonTypes from './components/pokemonTypes';
 import PokemonForm from './components/pokemonForm';
@@ -102,7 +101,7 @@ test('PokemonForm renders without crashing', () => {
 
 test('Search Button registers click', () => {
   const mockSubmit = jest.fn();
-  const wrapper = shallow(<PokemonForm onSubmit={mockSubmit}/>);
+  const wrapper = shallow(<PokemonForm apiCall={mockSubmit}/>);
   wrapper.find('#searchButton').simulate('click');
-  expect(mockSubmit).not.toHaveBeenCalled();
+  expect(mockSubmit).toHaveBeenCalled();
 });
