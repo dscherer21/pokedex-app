@@ -77,7 +77,7 @@ a:hover {
   margin-bottom: 2%;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 411px) {
 
   input {
     width: 90%;
@@ -88,7 +88,7 @@ a:hover {
   }
 
   .pokeball {
-    width: 35%;
+    width: 40%;
   }
 
   .pokemonFont {
@@ -98,14 +98,14 @@ a:hover {
 
 }
 
-@media screen and (min-width: 646px) {
+@media screen and (min-width: 768px) {
 
   input {
-    width: 215px;
+    width: 260px;
   }
 
   select {
-    width: 110px;
+    width: 150px;
   }
 
   .pokeball {
@@ -113,23 +113,23 @@ a:hover {
   }
 
   .pokemonFont {
-    font-size: 175%;
+    font-size: 210%;
   }
 
 }
 
-@media screen and (min-width: 914px) {
+@media screen and (min-width: 1024px) {
 
   .pokemonFont {
-    font-size: 225%;
+    font-size: 290%;
   }
 
 }
 
-@media screen and (min-width: 1248px) {
+@media screen and (min-width: 1331px) {
 
   .pokemonFont {
-    font-size: 300%;
+    font-size: 360%;
   }
 
 }
