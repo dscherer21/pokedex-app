@@ -36,13 +36,14 @@ a:hover {
   font-family: 'Signika', sans-serif;
   text-shadow: -2px 0 blue, 0 2px blue, 2px 0 blue, 0 -2px blue;
   color: yellow;
-  line-height: 140%;
+  line-height: 120%;
   font-size: 125%;
+  padding-top: 15px;
 }
 
 .pokeball {
   border: 3px solid black;
-  width: 40%;
+  width: 42%;
   margin: 10px auto;
   margin-top: 3%;
   background: linear-gradient(red 0, red 49%, black 0, black 51%, whitesmoke 0);
