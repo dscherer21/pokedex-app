@@ -26,7 +26,7 @@
   "homepage": "https://github.com/dscherer21/pokedex-app#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "dotenv": "^8.2.0",
+    "dotenv": "^8.6.0",
     "express": "^4.17.1"
   }
 }
